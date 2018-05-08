@@ -32,3 +32,8 @@ Makefile*
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.*
+
+# Build files
+.qmake.stash
+moc_predefs.h
+radeon-profile

@@ -117,6 +117,8 @@ void radeon_profile::changeEvent(QEvent *event)
 void radeon_profile::gpuChanged()
 {
     timer->stop();
+    //clear QTreeWidget when switching GPU's on multi GPU systems
+    ui->list_currentGPUData->clear();
     device.changeGpu(ui->combo_gpus->currentIndex());
     refreshGpuData();
     setupUiEnabledFeatures(device.getDriverFeatures(), device.gpuData);
