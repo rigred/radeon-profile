@@ -306,8 +306,10 @@ void radeon_profile::refreshUI() {
     // refresh top bar
     topbarManager.updateItems(device.gpuData);
 
+
     // GPU data list
     if (ui->mainTabs->currentIndex() == 0) {
+        ui->list_currentGPUData->clear();
         for (int i = 0; i < ui->list_currentGPUData->topLevelItemCount(); ++i) {
             if (keysInCurrentGpuList.value(i) == ValueID::TEMPERATURE_CURRENT) {
                 ui->list_currentGPUData->topLevelItem(i)->setText(1, device.gpuData.value(keysInCurrentGpuList.value(i)).strValue +
