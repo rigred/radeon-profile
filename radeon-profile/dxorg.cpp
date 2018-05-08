@@ -582,6 +582,8 @@ GPUFanSpeed dXorg::getFanSpeed() {
 void dXorg::setupRegex(const QString &data) {
     QRegExp rx;
 
+    qDebug() << data.size();
+
     switch (features.sysInfo.module) {
         case DriverModule::RADEON:
             rx.setPattern("sclk:\\s\\d+");
