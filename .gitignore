@@ -37,3 +37,6 @@ Makefile*
 .qmake.stash
 moc_predefs.h
 radeon-profile
+
+# Test files
+amdgpu_pm_info

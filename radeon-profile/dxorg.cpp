@@ -621,7 +621,9 @@ void dXorg::setupRegex(const QString &data) {
             rx.indexIn(data);
             if (!rx.cap(0).isEmpty()) {
                 dXorg::rxPatterns.sclk = "\\d+\\s\\w+\\s\\(SCLK\\)",
-                        dXorg::rxPatterns.mclk = "\\d+\\s\\w+\\s\\(MCLK\\)";
+                        dXorg::rxPatterns.mclk = "\\d+\\s\\w+\\s\\(MCLK\\)",
+                        dXorg::rxPatterns.vddc = "\\d+\\s\\w+\\s\\(VDDC\\)",
+                        dXorg::rxPatterns.vddci = "\\d+\\s\\w+\\s\\(VDDCI\\)";
 
                 rxMatchIndex = 0;
                 clocksValueDivider = 1;
